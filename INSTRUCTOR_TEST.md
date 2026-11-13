@@ -45,6 +45,8 @@ No Docker executable or authenticated live Codespace was available for this test
 
 Both instructor supplied settings are preserved exactly in `.vscode/settings.json`.
 
+`interactiveWindow.executeWithShiftEnter: true` also enables Shift+Enter inside the Interactive Window input box, leaving Enter available for a new line. This is separate from executing selected text in a Python editor. The [VS Code declaration](https://github.com/microsoft/vscode/blob/main/src/vs/workbench/contrib/interactive/browser/interactive.contribution.ts) defaults this option to false. It was added after the first browser test identified the missing preference.
+
 - `jupyter.interactiveWindow.textEditor.executeSelection: true` is declared as a resource scoped Boolean in the [official Jupyter manifest](https://github.com/microsoft/vscode-jupyter/blob/main/package.json), whose retrieved version was 2026.6.1. Its Shift+Enter command is also declared there.
 - `interactiveWindow.collapseCellInputCode: "never"` is a VS Code setting rather than a Jupyter namespaced setting. Its recognition in the installed Codespaces release is not yet verified. Do not silently remove or rename it. Check it using the browser procedure below. No replacement is asserted without verifying the deployed release.
 - `jupyter.notebookFileRoot: "${fileDirname}"` is declared in that Jupyter manifest and makes the notebook's `../data/` path explicit. The script separately handles root and subfolder working directories.
