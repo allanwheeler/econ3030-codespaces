@@ -1,0 +1,8 @@
+{
+  "interactiveWindow.collapseCellInputCode": "never",
+  "jupyter.interactiveWindow.textEditor.executeSelection": true,
+  "editor.fontSize": 14,
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "jupyter.notebookFileRoot": "${fileDirname}"
+}
