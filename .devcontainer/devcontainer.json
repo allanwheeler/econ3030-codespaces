@@ -15,8 +15,18 @@
       ],
       "settings": {
         "python.defaultInterpreterPath": "/usr/local/bin/python",
-        "interactiveWindow.executeWithShiftEnter": true
+        "interactiveWindow.executeWithShiftEnter": true,
+        "chat.disableAIFeatures": true,
+        "workbench.sideBar.location": "left",
+        "workbench.activityBar.location": "default",
+        "workbench.secondarySideBar.defaultVisibility": "hidden",
+        "workbench.startupEditor": "none"
       }
+    },
+    "codespaces": {
+      "openFiles": [
+        "notebooks/01_getting_started.ipynb"
+      ]
     }
   },
   "remoteUser": "vscode"
