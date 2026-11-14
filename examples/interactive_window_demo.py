@@ -2,7 +2,7 @@
 # Use Python 3.12 (ECON 3030). Paths work from the root or a course subfolder.
 # All observations are synthetic teaching data, not official statistics.
 
-# %%
+
 import polars as pl
 import altair as alt
 from pathlib import Path
@@ -16,13 +16,13 @@ if not (project / "data/state_unemployment.csv").exists():
 df = pl.read_csv(project / "data/state_unemployment.csv")
 df.head()
 
-# %%
+
 california = df.filter(
     pl.col("state") == "California"
 )
 california
 
-# %%
+
 chart = (
     alt.Chart(california)
     .mark_line(point=True)
